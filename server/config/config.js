@@ -26,7 +26,7 @@
  {
      urlDB = 'mongodb://localhost:27017/cafe';
  }else{
-     urlDB = 'mongodb+srv://vertigo:SX8lTd5pvctW1w2J@cluster0-asjut.mongodb.net/cafe';
+     urlDB = process.env.MONGO_URI;
  }
 process.env.URLDB = urlDB;
 

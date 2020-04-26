@@ -116,7 +116,7 @@ HEROKU
 
   7. heroku login ---> abrirá navegador y solicita credenciales ( en teoría sólo una vez por máquina ) y nos dará confirmación en la consola
 
-  8. heroku git:remote -a iotrize-basic-node-server
+  8. heroku git:remote -a iotized-api-rest-usuario
 
   9. git add .
 
@@ -181,3 +181,17 @@ Nombre del repositorio
 + draw.io ---> Para diagramas de clase
 + npm i mongoose ---> + mongoose@5.9.5
 + npm i underscore ---> 
+
+
+-----------------------------------------------------------------------------------------------
+
+
+> Variables de entorno Heroku
+
+1. heroku config ---> Muestra las variables de entorno actuales
+
+2. heroku config:set nombre="cualquier_nombre" ---> Añade una variable de entorno 
+
+3. heroku config:unset nombre ----> Elimina una variable de entorno con el nombre especificado
+
+4. 

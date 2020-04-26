@@ -1,20 +1,22 @@
-+ express - + express@4.17.1
-+ bodyparser - > npm i body-parser --save
-+ BCRYPT -> npm install @bcrypt@4.0.1 ----> Última versión a fecha 26_04_2020
-+ draw.io ---> Para diagramas de clase
-+ npm i mongoose ---> + mongoose@5.9.5
-+ npm i underscore ---> 
 
 
 
-                                                To run mongo Database:
-                                                                +++++++++++++++++++++++++++++++++++++++++++++++++++
-
-                                                                "C:\Program Files\MongoDB\Server\4.2\bin\mongo.exe"
-
-                                                                +++++++++++++++++++++++++++++++++++++++++++++++++++
-
+                                                            A P I    R E S T    U S U A R I O
 ===================================================================================================================================================================
+> a p i  R E S T  u s u a r i o
+
+Se trata de una proyecto base de un API rest para gestión de usuarios desplegada en Heroku
+
+
+
+To run mongo Database:
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+"C:\Program Files\MongoDB\Server\4.2\bin\mongo.exe" o la ruta donde el usuario que haga uso del proyecto tengo su ejecutable de mongo
+
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
                                                                         MongoDb 
 ===================================================================================================================================================================
 1. Create database directory.
@@ -57,29 +59,26 @@ Delete Documents
 
 
 
-===================================================================================================================================================================
+
                                                                         GIT PROCESS 
 ===================================================================================================================================================================
->git init
->git add .  ---> Stage all
->git commit -m "initial commit"
->git status  ---> Para comprobar el estado actual 
->git remote add origin https://github.com/dteso/REST_server.git   Seteo el origin a gitHub
->git push -u origin master ---> PUSH  a Master
+1. git init
+2. git add .  ---> Stage all
+3. git commit -m "initial commit"
+4. git status  ---> Para comprobar el estado actual 
+5. git remote add origin https://github.com/dteso/apiRestUsuario.git   Seteo el origin a gitHub
+6. git push -u origin master ---> PUSH  a Master
 
 
 - Creación del release
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-git tag -a v0.0.0 -m "VersiónAlpha-Base"
-git tag
-git push --tags
+1. git tag -a v0.0.0 -m "VersiónAlpha-Base"
+2. git tag
+3. git push --tags
 /*******************************************************************************************************************************************************************/
 
 
 
-
-
-===================================================================================================================================================================
                                                                         PROCESO 
 ===================================================================================================================================================================
 1º Server
@@ -94,9 +93,6 @@ git push --tags
 
 
 
-
-
-===================================================================================================================================================================
                                                                         HEROKU 
 ===================================================================================================================================================================
 
@@ -140,11 +136,13 @@ git push --tags
 
   Nos proporciona un nombre por defecto al no haberlo especificado, aunque podríamos haberlo hecho.
   En este caso nos ha devuelto:
-  ------------------------------------------------------------------------------------------------------
-                    URL                         |             Nombre del repositorio 
-  ------------------------------------------------------------------------------------------------------
-  https://peaceful-headland-42142.herokuapp.com/ | https://git.heroku.com/peaceful-headland-42142.git
-  ------------------------------------------------------------------------------------------------------
+
+URL                                    
+   > https://peaceful-headland-42142.herokuapp.com/ 
+
+Nombre del repositorio 
+   > https://git.heroku.com/peaceful-headland-42142.git
+
 
 
   2. git remote -v 
@@ -174,3 +172,12 @@ git push --tags
 
 > mLab  - Ofrece un sevicio gratuito para hasta 500Mb. Nos sirve para gestionar un servicio MongoDB en la nube.
           Actualmente se realiza a través de MongoDB Atlas
+
+
+
++ express - + express@4.17.1
++ bodyparser - > npm i body-parser --save
++ BCRYPT -> npm install @bcrypt@4.0.1 ----> Última versión a fecha 26_04_2020
++ draw.io ---> Para diagramas de clase
++ npm i mongoose ---> + mongoose@5.9.5
++ npm i underscore ---> 

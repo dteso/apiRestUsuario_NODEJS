@@ -190,8 +190,8 @@ Nombre del repositorio
 
 1. heroku config ---> Muestra las variables de entorno actuales
 
-2. heroku config:set nombre="cualquier_nombre" ---> Añade una variable de entorno 
+2. heroku config:set MONGO_URI="valor_de_la_ur_de_la_base_de_datos_remota_por_ejemplo" ---> Añade una variable de entorno 
 
 3. heroku config:unset nombre ----> Elimina una variable de entorno con el nombre especificado
 
-4. 
+4. Sustituir en el código urlDB = process.env.MONGO_URI;

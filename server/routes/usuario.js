@@ -1,13 +1,24 @@
 const express = require ('express');
 const Usuario = require ('../models/usuario');
 const app = express();
+
+
 const bcrypt = require ('bcrypt');
 const _ = require ('underscore');
+
+
+const { verificarToken, verificarAdminRol } = require ('../middlewares/authentication');
 
 //RUTAS
 
 /* GET */
-app.get('/usuario', function(req,res){
+app.get('/usuario', verificarToken , function(req,res){ //verificarToken es un middleware
+
+    // return res.json({
+    //     usuario: req.usuario,
+    //     nombre: req.usuario.nombre,
+    //     email: req.usuario.email
+    // })
 
     let desde = req.query.desde || 0; //---> Query se va a indicar después de la petición con ..localhost:3000?desde =
     let limite = req.query.limite || null; //&limite=   Estos parámetros son los llamados req.params...
@@ -41,7 +52,7 @@ app.get('/usuario', function(req,res){
 
 
 /* POST */
-app.post('/usuario', function(req,res){
+app.post('/usuario', [verificarToken, verificarAdminRol], function(req,res){
     let body = req.body;
 
     let usuario = new Usuario({
@@ -72,7 +83,7 @@ app.post('/usuario', function(req,res){
 
 
 /* PUT */
-app.put('/usuario/:id', function(req,res){ //PUT: localhost:3000/usuario/5ea53d748b175b42fcb3d3c8
+app.put('/usuario/:id', [verificarToken, verificarAdminRol], function(req,res){ //PUT: localhost:3000/usuario/5ea53d748b175b42fcb3d3c8
     let id = req.params.id;
     //let body = req.body;
     let body = _.pick ( req.body, ['nombre', 'email','img', 'role', 'estado'] ); //Estamos utilizando la librería underscore y su función para definir que propiedades del objeto van a ser actualziables 
@@ -128,7 +139,7 @@ app.put('/usuario/:id', function(req,res){ //PUT: localhost:3000/usuario/5ea53d7
 
 
 /* DELETE ----> Este sería el borrado lógico usando una petición PUT  */
-app.delete('/usuario/:id', function(req,res){ //DELETE: localhost:3000/usuario/5ea558ce8fc9cd331ca5a27a
+app.delete('/usuario/:id',[verificarToken, verificarAdminRol], function(req,res){ //DELETE: localhost:3000/usuario/5ea558ce8fc9cd331ca5a27a
     //res.json("DELETE Usuario  Request OK :)");
     let id = req.params.id;
 

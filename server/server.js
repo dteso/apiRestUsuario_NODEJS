@@ -13,10 +13,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
+app.use(require('./routes/index')); //----> Es dónde nos hemos llevado las rutas que están debajo
+//Nos las llevamos al archivo de rutas
+    // app.use(require('./routes/usuario'));
+    // app.use(require('./routes/login'));
 
 
 /* C O N E X I Ó N   A    B D */ 
-app.use(require('./routes/usuario'));
 //Establecer conexión a la base da datos
 mongoose.connect(process.env.URLDB, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true },(err,res)=>{ //'protocolo://server_url:puerto/base_de_datos
     

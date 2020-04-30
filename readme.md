@@ -9,7 +9,9 @@ Se trata de una proyecto base de un API rest para gestión de usuarios desplegad
 
 
 
-To run mongo Database:
+To run mongo Database:SEED
+"C:\Program Files\MongoDB\Server\4.2\bin\mongod.exe" --dbpath="c:\data\db"
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
 "C:\Program Files\MongoDB\Server\4.2\bin\mongo.exe" o la ruta donde el usuario que haga uso del proyecto tengo su ejecutable de mongo

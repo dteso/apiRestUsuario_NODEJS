@@ -183,6 +183,7 @@ Nombre del repositorio
 + draw.io ---> Para diagramas de clase
 + npm i mongoose ---> + mongoose@5.9.5
 + npm i underscore ---> 
++ npm i google-auth-library --save
 
 
 -----------------------------------------------------------------------------------------------

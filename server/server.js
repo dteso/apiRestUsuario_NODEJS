@@ -29,7 +29,7 @@ app.use (express.static(path.resolve(__dirname , '../public')));
 
 /* C O N E X I Ó N   A    B D */ 
 //Establecer conexión a la base da datos
-mongoose.connect(process.env.URLDB, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true },(err,res)=>{ //'protocolo://server_url:puerto/base_de_datos
+mongoose.connect(process.env.URLDB, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true,  useFindAndModify: false },(err,res)=>{ //'protocolo://server_url:puerto/base_de_datos
     
     if (err) throw (err);
     

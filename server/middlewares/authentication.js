@@ -46,7 +46,30 @@ let verificarAdminRol = (req,res,next) => { //next va a continuar con la ejecuci
 };
 
 
+
+//=============================
+// Verificar token img por url
+//=============================
+
+let verificarTokenImg = (req,res,next) => { //next va a continuar con la ejecución del programa. 
+
+    let token = req.query.token; ///Este token se pasa por url despues de ?=token
+
+    jwt.verify(token, process.env.SEED, (err,decoded) => { //decoded en reaidad es el payload
+        if(err) {
+            return res.status(401).json({
+                ok: false,
+                err: err
+            });
+        }
+        req.usuario = decoded.usuario; //como decoded es el payload, en realidad puedo obtener el usuario porque se encuentra encriptado dentro de él
+    });
+
+    next(); //Si no pongo el next no se va a continuar con la ejecución del programa tras el middlewarte
+};
+
 module.exports = {
     verificarToken,
-    verificarAdminRol
+    verificarAdminRol,
+    verificarTokenImg
 }

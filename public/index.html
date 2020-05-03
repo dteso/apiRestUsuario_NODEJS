@@ -10,6 +10,10 @@
         <meta name="google-signin-client_id" content="701057228806-8idevrujs3r6ofb5idsn7isuvmkima0h.apps.googleusercontent.com">
     </head>
     <body>
+
+        <!-- Para poder ver la imágen desde el front, deberíamos modificar tanto la url como el toke desde ahí. No es posible hacerlo desde el back puesto que el token va a expirar y no podemos corregir la url a fuego -->
+        <!-- <img src="http://localhost:3000/imagen/usuarios/5ea558898fc9cd331ca5a26e-585.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJBRE1JTl9ST0xFIiwiZXN0YWRvIjp0cnVlLCJnb29nbGUiOmZhbHNlLCJfaWQiOiI1ZWE1NTg1ZjhmYzljZDMzMWNhNWEyNmIiLCJub21icmUiOiJURVNUMSIsImVtYWlsIjoidGVzdDFAZW1haWwuZXMiLCJfX3YiOjB9LCJpYXQiOjE1ODg0MDY5NjIsImV4cCI6MTU4ODU3OTc2Mn0.Y1ca55Nz7KOOZG_8x5M9OqYex2AAebCiWXmRHaiXP4E"> -->
+
         <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
         <a href="#" onclick="signOut();">Sign out</a>
